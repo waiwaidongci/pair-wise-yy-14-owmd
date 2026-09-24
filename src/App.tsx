@@ -1,4 +1,5 @@
 import "./styles.css";
+import SupportSection from "./SupportSection";
 
 const project = {
   "sourceNo": 8,
@@ -121,6 +122,8 @@ function App() {
           ))}
         </div>
       </section>
+
+      <SupportSection />
     </main>
   );
 }

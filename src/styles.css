@@ -173,6 +173,265 @@ input {
   padding: 0 12px;
 }
 
+select {
+  width: 100%;
+  min-height: 42px;
+  border-radius: 7px;
+  border: 1px solid var(--border);
+  padding: 0 12px;
+  background: #ffffff;
+  font: inherit;
+}
+
+/* 临时支撑：巡检与复位放行 */
+.support-section {
+  margin-top: 18px;
+}
+
+.gate-banner {
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  border: 1px solid;
+  white-space: nowrap;
+}
+
+.gate-banner.blocked {
+  border-color: #fca5a5;
+  background: #fef2f2;
+  color: #991b1b;
+}
+
+.gate-banner.free {
+  border-color: #5eead4;
+  background: #f0fdfa;
+  color: #115e59;
+}
+
+.rule-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0;
+  margin: 0 0 18px;
+  list-style: none;
+}
+
+.rule-strip li {
+  padding: 8px 12px;
+  border: 1px dashed color-mix(in srgb, var(--primary) 45%, var(--border));
+  border-radius: 7px;
+  background: color-mix(in srgb, var(--primary) 6%, #ffffff);
+  color: var(--primary);
+  font-size: 13px;
+}
+
+.support-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+.sub-panel {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 18px;
+  background: #fbfdff;
+}
+
+.sub-panel h3 {
+  margin-top: 0;
+}
+
+.sub-panel form,
+.sub-panel .field-grid {
+  margin-bottom: 14px;
+}
+
+.form-message {
+  margin: 0 0 12px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.form-message.ok {
+  color: var(--accent);
+}
+
+.form-message.err {
+  color: #dc2626;
+}
+
+.hint {
+  font-size: 12px;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.check-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.check-row input {
+  width: auto;
+  min-height: auto;
+}
+
+.check-row span {
+  color: #172033;
+  font-size: 14px;
+}
+
+.relation svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.legend {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  font-size: 12px;
+  color: #526071;
+  margin-top: 8px;
+}
+
+.legend i {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 4px;
+}
+
+.anomaly-lines {
+  margin: 10px 0 0;
+  padding: 10px 12px;
+  list-style: none;
+  font-size: 13px;
+  color: #991b1b;
+  background: #fef2f2;
+  border-radius: 7px;
+  display: grid;
+  gap: 4px;
+}
+
+.filter-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.filter-row button {
+  padding: 0 12px;
+}
+
+.filter-row button.active {
+  background: var(--primary);
+  color: #ffffff;
+  border-color: var(--primary);
+}
+
+.case-list {
+  display: grid;
+  gap: 12px;
+}
+
+.case-card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px;
+  background: #ffffff;
+}
+
+.case-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  display: inline-block;
+  padding: 3px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.tag-crack {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  color: #991b1b;
+  background: #fee2e2;
+}
+
+.reading-list {
+  display: grid;
+  gap: 8px;
+  margin: 12px 0;
+}
+
+.reading-item {
+  border-left: 3px solid var(--border);
+  padding: 8px 12px;
+  background: #f8fafc;
+  border-radius: 6px;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.reading-item.has-issue {
+  border-left-color: #dc2626;
+  background: #fef2f2;
+}
+
+.issue-line {
+  margin-left: 8px;
+}
+
+.issue-tag {
+  display: inline-block;
+  margin-right: 6px;
+  padding: 1px 8px;
+  border-radius: 999px;
+  background: #dc2626;
+  color: #ffffff;
+  font-size: 12px;
+}
+
+.case-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.case-actions button {
+  padding: 0 14px;
+}
+
+.case-actions button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+@media (max-width: 960px) {
+  .support-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
 .records {
   display: grid;
   gap: 12px;
